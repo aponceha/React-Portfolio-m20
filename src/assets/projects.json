@@ -1,0 +1,52 @@
+[
+    {
+        "title": "MongoDB Server",
+        "blurb": "One PARAGRAPH TEXT Nunc pharetra finibus est at efficitur. Praesent sed congue diam.",
+        "image": "password01",
+        "links": {
+            "Site": "https://www.mongodb.com/",
+            "Github": "github.com/aponceha/mongodb-server",
+            "Heroku": ""
+        }
+    },
+    {
+        "title": "SQL Server CLI",
+        "blurb": "Two PARAGRAPH TEXT Nunc pharetra finibus est at efficitur. Praesent sed congue diam.",
+        "image": "password01",
+        "links": {
+            "Site": "https://www.mongodb.com/",
+            "Github": "github.com/aponceha/mongodb-server",
+            "Heroku": "https://www.heroku.com/"
+        }
+    },
+    {
+        "title": "Sequelize Server",
+        "blurb": "Three PARAGRAPH TEXT Nunc pharetra finibus est at efficitur. Praesent sed congue diam.",
+        "image": "password01",
+        "links": {
+            "Site": "",
+            "Github": "github.com/aponceha/mongodb-server",
+            "Heroku": ""
+        }
+    },
+    {
+        "title": "MERN Fridge App",
+        "blurb": "Four PARAGRAPH TEXT Nunc pharetra finibus est at efficitur. Praesent sed congue diam.",
+        "image": "password01",
+        "links": {
+            "Site": "",
+            "Github": "github.com/aponceha/mongodb-server",
+            "Heroku": "https://www.heroku.com/"
+        }
+    },
+    {
+        "title": "Weather App",
+        "blurb": "Five PARAGRAPH TEXT Nunc pharetra finibus est at efficitur. Praesent sed congue diam.",
+        "image": "password01",
+        "links": {
+            "Site": "https://www.mongodb.com/",
+            "Github": "github.com/aponceha/mongodb-server",
+            "Heroku": "https://www.heroku.com/"
+        }
+    }
+]

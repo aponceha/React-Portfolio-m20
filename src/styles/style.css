@@ -1,0 +1,110 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.projectListLi {
+    transition: 300ms;
+    white-space: nowrap;
+}
+.projectListLi:hover {
+    letter-spacing: 0.104em;
+    transform: translateX(-0.1em);
+    cursor: pointer;
+}
+
+.logo {
+    height: 150px;
+    width: 150px;
+    padding: 10px;
+    transition: 300ms;
+    pointer-events: all;
+}
+
+.logo:hover {
+    cursor: pointer;
+    transform: scale(1.08);
+}
+
+.nav-item {
+    transition: 300ms;
+    background-image: linear-gradient(to right, #d53a9d, #743ad5,#d53a9d);
+    background-origin: border-box;
+    background-size: 100% 3px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    padding-bottom: 0.3rem;
+    color:rgb(186, 191, 202);
+    
+}
+
+.nav-item:hover {
+    letter-spacing: 0.12em;
+    transform: translateX(-0.1em);
+    
+}
+
+.mainHeader {
+    transition: 300ms;
+    width: fit-content;
+    color:rgb(186, 191, 202);
+
+}
+
+.mainHeader:hover {
+    letter-spacing: 0.11em;
+    transform: translateX(-0.1em);
+    cursor: pointer;
+}
+
+.fab {
+    transition: 300ms;
+}
+
+.fab:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+}
+
+.inputHeading {
+    padding: 0.3rem;
+}
+
+.formEmail, .formName {
+    width: 50%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.formMessage {  
+    margin-bottom: 1rem;
+}
+
+.buttonForm {
+    display: flex;
+    padding-top: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    width: 150px;
+    background-image: linear-gradient(to right, #d53a9d, #743ad5,#d53a9d);
+}
+
+.buttonForm:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    letter-spacing: 0.03em;
+}
+
+.error-text {
+    color: red;
+    left: 30px;
+}
