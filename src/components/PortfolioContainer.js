@@ -53,13 +53,13 @@ export default function PortfolioContainer() {
       setViewCards("1");
     }
     if (currentPage === 'Resume') {
-      return <Resume showHome={showHome} setShowHome={setShowHome}
-              exit={{ x: -400, opacity: 0, transition: { duration: 0.4 } }}
-      />;
+      return <Resume showHome={showHome} setShowHome={setShowHome}/>
     }
-    return <Contact showHome={showHome} setShowHome={setShowHome}
-            exit={{ x: -400, opacity: 0, transition: { duration: 0.4 } }}
-    />;
+    return (<>
+    <Contact showHome={showHome} setShowHome={setShowHome}/>
+    </>)
+    
+    
   };
   
   const renderText = () => {
@@ -169,10 +169,15 @@ export default function PortfolioContainer() {
 
 
   return (
-    <div
+    <div>
+    <AnimatePresence>
+    {viewCards == "0" && <motion.div style = {styles.body}
+    initial={{ scale:0, opacity: 0 }}
+    animate={{ scale:1, opacity: 1 }}
+    exit={{ scale: 0.2, opacity: 0, transition: { duration: 0.4 } }}
     key={viewCards}
+    mode="wait"
     >
-    {viewCards == "0" && <div style = {styles.body}>
       {/* Passing the currentPage from state and the function to update it */}
       <div style = {Object.assign(styles.mainContainer, styles.borderGradient)} >
         <div style={styles.borderGradientLeft}></div>
@@ -188,9 +193,17 @@ export default function PortfolioContainer() {
       <Footer />
       </div>
       
-    </div>}
+    </motion.div>}
+    </AnimatePresence>
+
     <AnimatePresence>
-    <motion.div>
+    <motion.div
+    initial={{ x: -400, opacity: 0 }}
+    animate={{ x: 0, scale: 1, opacity: 1 }}
+    exit={{ scale: 0.2, opacity: 0, transition: { duration: 0.4 } }}
+    key={viewCards}
+    mode="wait"
+    >
       {viewCards == "1" && <Portfolio viewCards={viewCards} setViewCards={setViewCards} handleGoHome={handleGoHome}/>}
     </motion.div>
     </AnimatePresence>
