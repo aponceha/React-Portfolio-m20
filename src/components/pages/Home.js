@@ -52,7 +52,7 @@ export default function Home(props) {
       <div className="link-div"> 
         {props.links.Site && <a href={props.links.Site} className="link-header">View Site</a>}
         {props.links.Github && <a href={props.links.Github} className="link-header">Github</a>}
-        {props.links.Heroku && <a href={props.links.Heroku} className="link-header">Heroku</a>}
+        {props.links.Video && <a href={props.links.Video} className="link-header">Video</a>}
       </div>
       </p>
     </motion.div>}

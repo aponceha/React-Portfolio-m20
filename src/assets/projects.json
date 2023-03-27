@@ -4,8 +4,8 @@
         "blurb": "Allows users to create, save, and delete notes. Uses Express.js back end and saves and retrieves note data from a JSON file. Uses UUID to generate unique IDs for each note. RESTful API endpoints are used to perform CRUD operations.",
         "image": "/src/assets/project7",
         "links": {
-            "Site": "https://www.mongodb.com/",
-            "Github": "github.com/aponceha/mongodb-server",
+            "Site": "https://note-taker-aponceha.herokuapp.com/",
+            "Github": "https://github.com/aponceha/Note-Taker",
             "Heroku": ""
         }
     },
@@ -14,9 +14,9 @@
         "blurb": "Uses SQL Server to manage a database of employees, roles, and departments. Uses inquirer to prompt the user for what action they would like to take. Employees can be added update and delted. Departments and Roles can also be added updated and delted. Uses RESTful API endpoints to perform CRUD operations.",
         "image": "/src/assets/project8",
         "links": {
-            "Site": "https://www.mongodb.com/",
-            "Github": "github.com/aponceha/mongodb-server",
-            "Heroku": "https://www.heroku.com/"
+            "Site": "",
+            "Github": "https://github.com/aponceha/SQL-Database-Manager-m12",
+            "Video": "https://drive.google.com/file/d/1CAb5i0VAaz1ojhmZFp0uNSLdGgKn5mFq/view"
         }
     },
     {
@@ -24,8 +24,8 @@
         "blurb": "Javascript App that navigates users to a starting page explaining the rules of the quiz. Once the user clicks the start button, the user is presented with a series of questions. The user is then presented with a score at the end of the quiz. The user is then able to save their initials and score to local storage.",
         "image": "/src/assets/project2",
         "links": {
-            "Site": "",
-            "Github": "github.com/aponceha/mongodb-server",
+            "Site": "https://aponceha.github.io/Quiz-App-m4/",
+            "Github": "https://github.com/aponceha/Quiz-App-m4",
             "Heroku": ""
         }
     },
@@ -34,9 +34,9 @@
         "blurb": "A CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well. Uses Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication.",
         "image": "/src/assets/project10",
         "links": {
-            "Site": "",
-            "Github": "github.com/aponceha/mongodb-server",
-            "Heroku": "https://www.heroku.com/"
+            "Site": "https://tech-blog-aponceha.herokuapp.com/",
+            "Github": "https://github.com/aponceha/Tech-Blog",
+            "Heroku": ""
         }
     },
     {
@@ -44,18 +44,18 @@
         "blurb": "Weather app using JS and uses the OpenWeather API to display dynamic data. Allows users to search by City Name, and save search history to quickly recall past search history cities.",
         "image": "/src/assets/project4",
         "links": {
-            "Site": "https://www.mongodb.com/",
-            "Github": "github.com/aponceha/mongodb-server",
-            "Heroku": "https://www.heroku.com/"
+            "Site": "https://aponceha.github.io/WeatherApp-m6/",
+            "Github": "https://github.com/aponceha/WeatherApp-m6",
+            "Heroku": ""
         }
     },
     {"title": "Password Generator",
     "blurb": "Password Generator App that allows users to select the length of their password, and what types of characters they would like to include. Uses JS to generate a random password based on the user's input.",
     "image": "/src/assets/project1",
     "links": {
-        "Site": "https://www.mongodb.com/",
-        "Github": "github.com/aponceha/mongodb-server",
-        "Heroku": "https://www.heroku.com/"
+        "Site": "https://aponceha.github.io/Password-Generator-m3/",
+        "Github": "https://github.com/aponceha/Password-Generator-m3",
+        "Heroku": ""
         }
     },
     {"title": "Team Profile Generator",
@@ -70,40 +70,40 @@
     "blurb": "Day Planner App that allows users to save events for each hour of the day. Uses Moment.js to display the current day and time. Uses local storage to save events.",
     "image": "/src/assets/project3",
     "links": {
-        "Site": "https://www.mongodb.com/",
-        "Github": "github.com/aponceha/mongodb-server",
-        "Heroku": "https://www.heroku.com/"
+        "Site": "",
+        "Github": "https://github.com/aponceha/Work-Day-Scheduler-m5",
+        "Video": "https://drive.google.com/file/d/1eiZFoXvLferL2I_53guHZaFunuWGsxC2/view"
     }},
     {"title": "E-Commerce Back End",
     "blurb": "Server back end created for MySQL/Sequelized Data Models. RESTful API modelled for CRUD operations.",
     "image": "/src/assets/project11",
     "links": {
-        "Site": "https://www.mongodb.com/",
-        "Github": "github.com/aponceha/mongodb-server",
-        "Heroku": "https://www.heroku.com/"
+        "Site": "",
+        "Github": "https://github.com/aponceha/E-Commerce-Back-End-m13",
+        "Video": "https://drive.google.com/file/d/1G7_IQZ9Zh4aca4EMMR44rI_IG-kiAlXz/view"
     }},
     {"title": "Social Media App Back End",
     "blurb": "Server back end created for MongoDB/Mongoose Data Models. RESTful API modelled for CRUD operations..",
     "image": "/src/assets/project12",
     "links": {
         "Site": "https://www.mongodb.com/",
-        "Github": "github.com/aponceha/mongodb-server",
-        "Heroku": "https://www.heroku.com/"
+        "Github": "https://github.com/aponceha/Social-Network-API-m18",
+        "Video": "https://drive.google.com/file/d/1TKC01hj2LA3_5XaW6-J4XmjaMMmOAK_q/view"
     }},
     {"title": "README Generator",
     "blurb": "Server back end created for MongoDB/Mongoose Data Models. RESTful API modelled for CRUD operations..",
     "image": "/src/assets/project5",
     "links": {
         "Site": "https://www.mongodb.com/",
-        "Github": "github.com/aponceha/mongodb-server",
-        "Heroku": "https://www.heroku.com/"
+        "Github": "https://github.com/aponceha/README-Generator-m9",
+        "Video": "https://drive.google.com/file/d/13VfVfM2CHHFekaPfhuBEDv7YaREq2Z_V/view"
     }},
     {"title": "Responsive Website Refactor",
     "blurb": "Server back end created for MongoDB/Mongoose Data Models. RESTful API modelled for CRUD operations..",
     "image": "/src/assets/project13",
     "links": {
-        "Site": "https://www.mongodb.com/",
-        "Github": "github.com/aponceha/mongodb-server",
-        "Heroku": "https://www.heroku.com/"
+        "Site": "https://aponceha.github.io/responsive-css-m1/",
+        "Github": "https://github.com/aponceha/responsive-css-m1",
+        "Heroku": ""
     }}
 ]
