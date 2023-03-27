@@ -41,6 +41,18 @@ export default function Porfolio(props) {
   const close = () => setModalOpen(false);
   const open = () => setModalOpen(true);
 
+  this.state = {isToggleOn: true};
+
+    // This binding is necessary to make `this` work in the callback
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  function handleClick() {
+    this.setState(prevState => ({
+      isToggleOn: !prevState.isToggleOn
+    }));
+  }
+
 
   const containerVariants = {
     hidden: {
@@ -83,6 +95,9 @@ export default function Porfolio(props) {
     },
   };
 
+  function cardClick () {
+
+  }
 
   return (
 
@@ -113,6 +128,7 @@ export default function Porfolio(props) {
         onClick={() => {modalOpen ? close() : open(); stopPropagation()}}
         >
           <motion.div className= {img}>
+          <h1 className="projh1">{project.title}</h1>
           </motion.div>
           <AnimatePresence>
           {modalOpen && <motion.div className="descriptionBox"
@@ -122,7 +138,6 @@ export default function Porfolio(props) {
           key={img}
           
           >
-              <h1 className="projh1">{project.title}</h1>
               <p className="pContainer"> {project.blurb}
               </p>
               <div className="link-div"> 

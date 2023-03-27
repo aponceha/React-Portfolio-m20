@@ -213,16 +213,26 @@ a:visited {
     position: absolute;
     top: 0;
     left: 0;
+    opacity: 0.95
 
 }
 
 .projh1 {
+    position:absolute;
     background-color: rgb(48, 11, 90);
     display: flex;
     justify-content: center;
+    align-items: center;
     border-radius: 5px;
-    padding: 3px;
+    padding: 10px;
     font-size: large;
+    color:hsl(0, 0%, 100%);
+    top: 50%;
+    height: 20%;
+    width: 95%;   
+    font-family: "Montserrat";
+    opacity: 0.78;
+
 }
 
 .pContainer {
