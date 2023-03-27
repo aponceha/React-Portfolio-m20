@@ -2,7 +2,7 @@
   "name": "00-practice-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://aponceha.github.io/portfolio-react/",
+  "homepage": "https://aponceha.github.io/React-Portfolio-m20/",
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
     "@fontsource/montserrat": "^4.5.14",
