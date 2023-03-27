@@ -41,17 +41,7 @@ export default function Porfolio(props) {
   const close = () => setModalOpen(false);
   const open = () => setModalOpen(true);
 
-  this.state = {isToggleOn: true};
-
-    // This binding is necessary to make `this` work in the callback
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  function handleClick() {
-    this.setState(prevState => ({
-      isToggleOn: !prevState.isToggleOn
-    }));
-  }
+  
 
 
   const containerVariants = {
@@ -95,12 +85,9 @@ export default function Porfolio(props) {
     },
   };
 
-  function cardClick () {
 
-  }
 
   return (
-
     <div className="portBody">
       <div className="portBtnDiv">
         <button className="btn btn-primary" onClick={() => 
@@ -157,3 +144,4 @@ export default function Porfolio(props) {
     </div>
   );
 
+};
