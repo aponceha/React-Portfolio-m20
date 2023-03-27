@@ -5,6 +5,7 @@ import { Viewer, Worker } from '@react-pdf-viewer/core';
 import { defaultLayoutPlugin } from '@react-pdf-viewer/default-layout';
 import '@react-pdf-viewer/core/lib/styles/index.css';
 import '@react-pdf-viewer/default-layout/lib/styles/index.css';
+import { motion, AnimatePresence} from 'framer-motion';
 
 
 
@@ -29,6 +30,7 @@ const styles = {
     paddingLeft: "18px",
     maxHeight: '85%',
     overflowY: "scroll",
+    zIndex: "4",
   },
 
   h1Container: {
@@ -37,16 +39,27 @@ const styles = {
   },
 };
 
-export default function Blog() {
+export default function Resume(props) {
+
+  setTimeout(() => {
+    props.setShowHome(true);
+  }, 400);
 
   return (
-    <div style={styles.homeContainer}>
+    <AnimatePresence>
+    {props.showHome && <motion.div style={styles.homeContainer}
+    initial={{ x: "100vw", opacity: 0 }}
+    animate={{ x: 0, opacity: 1 }}
+    transition={{ delay: 0.5, type: 'spring', stiffness: 120 }}
+    exit={{ x: -400, opacity: 0, transition: { duration: 0.4 } }}
+    >
       <h1 style={styles.h1Container}>Resume</h1>
       <div style={styles.pContainer}>
         <Worker workerUrl='https://unpkg.com/pdfjs-dist@2.15.349/build/pdf.worker.js'>
           <Viewer fileUrl={resume} />
         </Worker>
       </div>
-    </div>
+    </motion.div>}
+    </AnimatePresence>
   );
 }

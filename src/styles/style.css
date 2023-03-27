@@ -56,16 +56,16 @@ html, body {
 .mainHeader:hover {
     letter-spacing: 0.11em;
     transform: translateX(-0.1em);
-    cursor: pointer;
 }
 
 .fab {
-    transition: 300ms;
+    transition: 200ms;
 }
 
 .fab:hover {
     transform: scale(1.2);
     cursor: pointer;
+    color:rgb(176, 197, 247)
 }
 
 .form {
@@ -107,4 +107,142 @@ html, body {
 .error-text {
     color: red;
     left: 30px;
+}
+
+.link-header {
+    font-size: 1rem;
+    /* padding-top: 2rem;
+    padding-left: 2rem; */
+    color: white;
+    text-decoration: none;
+    margin: 2rem 1rem 0 1rem;
+    background-image: linear-gradient(to right, #d53a9d, #743ad5,#d53a9d);
+    background-origin: border-box;
+    background-size: 100% 3px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    transition: 300ms;
+}
+
+.link-header:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    letter-spacing: 0.01em;
+    color:rgb(186, 191, 202);
+    text-decoration: none;
+    
+}
+
+.link-div {
+    display: flex;
+    justify-content: flex-start;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    transition: 300ms;
+}
+
+a:active {
+    color: rgb(198, 207, 230);
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.portBtnDiv {
+    margin: 0.6rem;
+    display:flex;
+    justify-content: center;
+}
+
+.portBody {
+    background-color: hsl(0, 0%, 100%);
+    height: 100%;
+    width: 100%;
+}
+
+.cardContainer {
+    display: grid;
+    background-color: hsl(0, 85%, 65%);
+    grid-template-columns: repeat(4, 1fr);
+    width: 100vw;
+    padding: 1rem;
+    row-gap: 10px;
+    column-gap: 10px;
+    overflow: hidden;
+}
+
+.pCards {
+    background-color: rgb(2, 53, 17);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 250px;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pBorder {
+    background-color: rgb(38, 38, 61);
+    border-radius: 10px;
+}
+
+.descriptionBox {
+    background-color: white;
+    opacity: 0.1;
+}
+
+.projh1 {
+    background-color: blue;
+}
+
+.pcontainer {
+    border: solid rgb(113, 233, 139)
+}
+ .p1 {
+    background-image: url('../assets/project1.png');
+ }
+ .p2 {
+    background-image: url('../assets/project2.png');
+ }
+.p3 {
+    background-image: url('../assets/project3.png');
+}
+.p4 {
+    background-image: url('../assets/project4.png');
+}
+.p5 {
+    background-image: url('../assets/project5.png');
+}
+.p6 {
+    background-image: url('../assets/project6.png');
+}
+.p7 {
+    background-image: url('../assets/project7.png');
+}
+.p8 {
+    background-image: url('../assets/project8.png');
+}
+.p9 {
+    background-image: url('../assets/project9.png');
+}
+.p10 {
+    background-image: url('../assets/project10.png');
+}
+.p11 {
+    background-image: url('../assets/project11.png');
+}
+.p12 {
+    background-image: url('../assets/project12.png');
 }

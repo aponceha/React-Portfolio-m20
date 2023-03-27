@@ -4,6 +4,7 @@ import { validateEmail } from '../../utils/helpers';
 import "../../styles/style.css";
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { motion, AnimatePresence} from 'framer-motion';
 
 
   
@@ -15,6 +16,8 @@ const styles = {
     top: '25%',
     display: 'flex',
     flexDirection: 'column',
+    marginLeft: '5%',
+    zIndex: "4",
   },
   pContainer: {
     backgroundImage: "linear-gradient(to bottom, #d53a9d, #743ad5,#d53a9d)",
@@ -90,7 +93,13 @@ export default function Contact() {
   };
 
   return (
-    <div style={styles.homeContainer}>
+    <AnimatePresence>
+    <motion.div style={styles.homeContainer}
+    initial={{ x: "100vw", opacity: 0 }}
+    animate={{ x: 0, opacity: 1 }}
+    transition={{ delay: 0.5, type: 'spring', stiffness: 70 }}
+    exit={{ x: -400, opacity: 0, transition: { duration: 0.4 } }}
+    >
       <h1 style={styles.h1Container}>Contact</h1>
       <div style={styles.pContainer}>
       <form className="form" ref={form} onSubmit={sendEmail}>
@@ -132,6 +141,7 @@ export default function Contact() {
       )}
     </div>
 
-  </div>
+  </motion.div>
+  </AnimatePresence>
   );
 }

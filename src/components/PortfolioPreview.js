@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import '../styles/style.css';
 import projectData from '../assets/projects.json';
+import { motion } from 'framer-motion';
 
 const styles = {
     previewContainer: {
@@ -41,32 +42,39 @@ const styles = {
 }
 
 
-export default function PortfolioPreview({isProjectData, setIsProjectData}) {
+export default function PortfolioPreview({isProjectData, setIsProjectData, showHome, setShowHome}) {
   return (
-    <div style={styles.previewContainer}>
+    <motion.div style={styles.previewContainer}
+    initial={{ opacity: 0, scale: 0.2 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ delay: 1, duration: 2, type: 'spring', stiffness: 120 }}
+    >
       <h1 style={styles.h1Portfolio}>Projects</h1>
       <div style={styles.pListContainer}>
         <li className="projectListLi" style={styles.projectList}
-        onClick={() => setIsProjectData(1)}>
+        onClick={() => {setIsProjectData("1");
+        setShowHome(false);}
+        }>
           {projectData[0].title}
         </li>
         <li className="projectListLi" style={styles.projectList}
-        onClick={() => setIsProjectData(2)}>
+        onClick={() => {setIsProjectData("2");
+        setShowHome(false);}}>
           {projectData[1].title}
         </li>
         <li className="projectListLi" style={styles.projectList} 
-        onClick={() => setIsProjectData(3)}>
+        onClick={() => {setIsProjectData("3");setShowHome(false);}}>
           {projectData[2].title}
         </li>
         <li className="projectListLi" style={styles.projectList}
-        onClick={() => setIsProjectData(4)}>
+        onClick={() => {setIsProjectData("4");setShowHome(false);}}>
           {projectData[3].title}
         </li>
         <li className="projectListLi" style={styles.projectList} 
-        onClick={() => setIsProjectData(5)}>
+        onClick={() => {setIsProjectData("5");setShowHome(false);}}>
           {projectData[4].title}
         </li>
       </div>
-    </div>
+    </motion.div>
   );
 }

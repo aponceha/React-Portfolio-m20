@@ -1,8 +1,8 @@
 [
     {
-        "title": "MongoDB Server",
-        "blurb": "One PARAGRAPH TEXT Nunc pharetra finibus est at efficitur. Praesent sed congue diam.",
-        "image": "password01",
+        "title": "Note Taker App",
+        "blurb": "Allows users to create, save, and delete notes. Uses Express.js back end and saves and retrieves note data from a JSON file. Uses UUID to generate unique IDs for each note. RESTful API endpoints are used to perform CRUD operations.",
+        "image": "/src/assets/project7",
         "links": {
             "Site": "https://www.mongodb.com/",
             "Github": "github.com/aponceha/mongodb-server",
@@ -10,9 +10,9 @@
         }
     },
     {
-        "title": "SQL Server CLI",
-        "blurb": "Two PARAGRAPH TEXT Nunc pharetra finibus est at efficitur. Praesent sed congue diam.",
-        "image": "password01",
+        "title": "Employee Database Manager",
+        "blurb": "Uses SQL Server to manage a database of employees, roles, and departments. Uses inquirer to prompt the user for what action they would like to take. Employees can be added update and delted. Departments and Roles can also be added updated and delted. Uses RESTful API endpoints to perform CRUD operations.",
+        "image": "/src/assets/project8",
         "links": {
             "Site": "https://www.mongodb.com/",
             "Github": "github.com/aponceha/mongodb-server",
@@ -20,9 +20,9 @@
         }
     },
     {
-        "title": "Sequelize Server",
-        "blurb": "Three PARAGRAPH TEXT Nunc pharetra finibus est at efficitur. Praesent sed congue diam.",
-        "image": "password01",
+        "title": "Quiz App",
+        "blurb": "Javascript App that navigates users to a starting page explaining the rules of the quiz. Once the user clicks the start button, the user is presented with a series of questions. The user is then presented with a score at the end of the quiz. The user is then able to save their initials and score to local storage.",
+        "image": "/src/assets/project2",
         "links": {
             "Site": "",
             "Github": "github.com/aponceha/mongodb-server",
@@ -30,9 +30,9 @@
         }
     },
     {
-        "title": "MERN Fridge App",
-        "blurb": "Four PARAGRAPH TEXT Nunc pharetra finibus est at efficitur. Praesent sed congue diam.",
-        "image": "password01",
+        "title": "Tech Blog Site",
+        "blurb": "A CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well. Uses Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication.",
+        "image": "/src/assets/project10",
         "links": {
             "Site": "",
             "Github": "github.com/aponceha/mongodb-server",
@@ -41,12 +41,69 @@
     },
     {
         "title": "Weather App",
-        "blurb": "Five PARAGRAPH TEXT Nunc pharetra finibus est at efficitur. Praesent sed congue diam.",
-        "image": "password01",
+        "blurb": "Weather app using JS and uses the OpenWeather API to display dynamic data. Allows users to search by City Name, and save search history to quickly recall past search history cities.",
+        "image": "/src/assets/project4",
         "links": {
             "Site": "https://www.mongodb.com/",
             "Github": "github.com/aponceha/mongodb-server",
             "Heroku": "https://www.heroku.com/"
         }
-    }
+    },
+    {"title": "Password Generator",
+    "blurb": "Password Generator App that allows users to select the length of their password, and what types of characters they would like to include. Uses JS to generate a random password based on the user's input.",
+    "image": "/src/assets/project1",
+    "links": {
+        "Site": "https://www.mongodb.com/",
+        "Github": "github.com/aponceha/mongodb-server",
+        "Heroku": "https://www.heroku.com/"
+        }
+    },
+    {"title": "Team Profile Generator",
+    "blurb": "Uses Inquirer Prompts to ask a user to create a team. Orgnizes data into different User models that extend based on the employee type. A custom HTML file will be created with all entered data displayed into user cards",
+    "image": "/src/assets/project6",
+    "links": {
+        "Site": "https://www.mongodb.com/",
+        "Github": "github.com/aponceha/mongodb-server",
+        "Heroku": "https://www.heroku.com/"
+    }},
+    {"title": "Day Planner App",
+    "blurb": "Day Planner App that allows users to save events for each hour of the day. Uses Moment.js to display the current day and time. Uses local storage to save events.",
+    "image": "/src/assets/project3",
+    "links": {
+        "Site": "https://www.mongodb.com/",
+        "Github": "github.com/aponceha/mongodb-server",
+        "Heroku": "https://www.heroku.com/"
+    }},
+    {"title": "Sequelize Server Set Up",
+    "blurb": "Server back end created for MySQL/Sequelized Data Models. RESTful API modelled for CRUD operations.",
+    "image": "/src/assets/project11",
+    "links": {
+        "Site": "https://www.mongodb.com/",
+        "Github": "github.com/aponceha/mongodb-server",
+        "Heroku": "https://www.heroku.com/"
+    }},
+    {"title": "MongoDB Server Set Up",
+    "blurb": "Server back end created for MongoDB/Mongoose Data Models. RESTful API modelled for CRUD operations..",
+    "image": "/src/assets/project12",
+    "links": {
+        "Site": "https://www.mongodb.com/",
+        "Github": "github.com/aponceha/mongodb-server",
+        "Heroku": "https://www.heroku.com/"
+    }},
+    {"title": "README Generator",
+    "blurb": "Server back end created for MongoDB/Mongoose Data Models. RESTful API modelled for CRUD operations..",
+    "image": "/src/assets/project5",
+    "links": {
+        "Site": "https://www.mongodb.com/",
+        "Github": "github.com/aponceha/mongodb-server",
+        "Heroku": "https://www.heroku.com/"
+    }},
+    {"title": "README Regex Tutotial",
+    "blurb": "Server back end created for MongoDB/Mongoose Data Models. RESTful API modelled for CRUD operations..",
+    "image": "/src/assets/project9",
+    "links": {
+        "Site": "https://www.mongodb.com/",
+        "Github": "github.com/aponceha/mongodb-server",
+        "Heroku": "https://www.heroku.com/"
+    }}
 ]

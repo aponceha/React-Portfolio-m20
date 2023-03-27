@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/style.css';
 import logo from '../assets/aph-logo2.1.png';
+import {motion } from 'framer-motion';
 
 const styles = {
   nav: {
@@ -24,28 +25,24 @@ const styles = {
 
 // Here we are using object destructuring assignment to pluck off our variables from the props object
 // We assign them to their own variable names
-function NavTabs({ currentPage, handlePageChange }) {
+function NavTabs({ currentPage, handlePageChange, isProjectData, setIsProjectData, showHome, setShowHome }) {
   return (
-    <ul style = {styles.nav}>
-      <img src = {logo} alt="Logo" className="logo" onClick={() => handlePageChange('Home')}
+    <motion.ul style = {styles.nav}
+    initial={{ y: -100, opacity: 0 }}
+    animate={{ y: 0, opacity: 1 }}
+    transition={{ delay: 0.5, type: 'spring', stiffness: 120 }}
+    >
+      <img src = {logo} alt="Logo" className="logo" onClick={() => {
+        handlePageChange('Home');
+        setIsProjectData("0");}}
         ></img>
-      {/* <li className="nav-item">
-        <a
-          href="#about-me"
-          onClick={() => handlePageChange('Home')}
-          // This is a conditional (ternary) operator that checks to see if the current page is "Home"
-          // If it is, we set the current page to 'nav-link-active', otherwise we set it to 'nav-link'
-          className={currentPage === 'Home' ? 'nav-link active' : 'nav-link'}
-        >
-          About Me
-        </a>
-      </li> */}
+      
       <li className="nav-item">
         <a
           href="#portfolio"
-          onClick={() => handlePageChange('Portfolio')}
+          onClick={() => {handlePageChange('Portfolio'); setShowHome(false);}}
           // Check to see if the currentPage is `About`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-          className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}
+          className={currentPage === 'Portfolio' ? 'nav-link active' : 'nav-link'}
         >
           Portfolio
         </a>
@@ -53,8 +50,8 @@ function NavTabs({ currentPage, handlePageChange }) {
       <li className="nav-item">
         <a
           href="#resume"
-          onClick={() => handlePageChange('Resume')}
-          // Check to see if the currentPage is `Blog`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
+          onClick={() => {handlePageChange('Resume'); setShowHome(false);}}
+          // Check to see if the currentPage is `Resume`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
           className={currentPage === 'Blog' ? 'nav-link active' : 'nav-link'}
         >
           Resume
@@ -63,14 +60,14 @@ function NavTabs({ currentPage, handlePageChange }) {
       <li className="nav-item">
         <a
           href="#contact"
-          onClick={() => handlePageChange('Contact')}
+          onClick={() => {handlePageChange('Contact');setShowHome(false);}}
           // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
           className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}
         >
           Contact
         </a>
       </li>
-    </ul>
+    </motion.ul>
   );
 }
 

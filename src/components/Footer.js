@@ -20,9 +20,9 @@ const styles = {
 function Footer() {
   return (
     <footer style={styles.footer} className="footer">
-      <span><i  style={styles.icon} className="fab fa-2x fa-linkedin"></i>  
-      <i style={styles.icon} className="fab fa-2x fa-github"></i> 
-      <i style={styles.icon} className="fab fa-2x fa-stack-overflow"></i></span>
+      <span><a href="https://www.linkedin.com/in/albin-ponce-ha/" style={styles.icon} className="fab fa-2x fa-linkedin"></a>  
+      <a href="https://github.com/aponceha" style={styles.icon} className="fab fa-2x fa-github"></a> 
+      <a href="https://stackoverflow.com/users/21461503/albin-ponce-ha-albin" style={styles.icon} className="fab fa-2x fa-stack-overflow"></a></span>
       
     </footer>
   );

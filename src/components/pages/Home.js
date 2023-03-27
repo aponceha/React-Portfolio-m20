@@ -1,6 +1,8 @@
 import React from 'react';
 import '../../styles/style.css';
-import projectData from '../../assets/projects.json';
+import { motion, AnimatePresence} from 'framer-motion';
+import {useState} from 'react';
+
 
 const styles = {
   homeContainer: {
@@ -9,13 +11,14 @@ const styles = {
     top: '45%',
   },
   pContainer: {
-    backgroundImage: "linear-gradient(to bottom, #d53a9d, #743ad5,#d53a9d)",
-    backgrounOrigin: "border-box",
+    backgroundImage: "linear-gradient(to bottom, #d53a9d, #743ad5)",
+    backgroundOrigin: "border-box",
     backgroundSize: "3px",
     backgroundPosition: "left",
     backgroundRepeat: "no-repeat",
     paddingLeft: "18px",
     height: "fit-content",
+    marginTop: '24px',
 
   },
 
@@ -24,40 +27,35 @@ const styles = {
   },
 }
 
-const aboutMe = `Welcome, my name is Albin Ponce-Ha. I am a full stack web developer with 5+ years of experience in Data Analysis and 1 year of building web applications.
-I am a graduate of the UofT Full Stack Web Development Bootcamp. I am currently looking for a full time position as a web developer.`
+export default function Home(props) {
+  
+  setTimeout(() => {
+    props.setShowHome(true);
+  }, 400);
 
-
-
-export default function Home({option}) {
-  // const renderBlurb = () => {
-  //   if (isProjectData=0){
-  //     return aboutMe
-  //   }
-  //   else if (isProjectData=1) {
-  //     return projectData[0].blurb
-  //   }
-  //   else if (isProjectData=2) {
-  //     return projectData[1].blurb
-  //   }
-  //   else if (isProjectData=3) {
-  //     return projectData[2].blurb
-  //   }
-  //   else if (isProjectData=4) {
-  //     return projectData[3].blurb
-  //   }
-  //   else if (isProjectData=5) {
-  //     return projectData[4].blurb
-  //   }
-  // }
-
-  return (
-    <div style={styles.homeContainer}>
+  return ( 
+    <AnimatePresence>
+    {props.showHome && <motion.div style={styles.homeContainer}
+    key={props.header}
+    initial={{ x: 200, opacity: 0 }}
+    animate={{ x: 0, opacity: 1,}}
+    transition={{ delay: 0.2, type: 'tween', }}
+    exit={{ x: -300, opacity: 0, transition: { duration: 0.4 } }}
+    >
+      
       <h1 className="mainHeader" style={styles.h1Container}>
-      About Me</h1>
-      <p style={styles.pContainer}>
-        {option}
+      {props.header}</h1>
+      <p style={styles.pContainer}
+      >
+        {props.option}motion.
+      
+      <div className="link-div"> 
+        {props.links.Site && <a href={props.links.Site} className="link-header">View Site</a>}
+        {props.links.Github && <a href={props.links.Github} className="link-header">Github</a>}
+        {props.links.Heroku && <a href={props.links.Heroku} className="link-header">Heroku</a>}
+      </div>
       </p>
-    </div>
+    </motion.div>}
+    </AnimatePresence>
   );
 }
