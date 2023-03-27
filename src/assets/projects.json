@@ -74,7 +74,7 @@
         "Github": "github.com/aponceha/mongodb-server",
         "Heroku": "https://www.heroku.com/"
     }},
-    {"title": "Sequelize Server Set Up",
+    {"title": "E-Commerce Back End",
     "blurb": "Server back end created for MySQL/Sequelized Data Models. RESTful API modelled for CRUD operations.",
     "image": "/src/assets/project11",
     "links": {
@@ -82,7 +82,7 @@
         "Github": "github.com/aponceha/mongodb-server",
         "Heroku": "https://www.heroku.com/"
     }},
-    {"title": "MongoDB Server Set Up",
+    {"title": "Social Media App Back End",
     "blurb": "Server back end created for MongoDB/Mongoose Data Models. RESTful API modelled for CRUD operations..",
     "image": "/src/assets/project12",
     "links": {
@@ -98,9 +98,9 @@
         "Github": "github.com/aponceha/mongodb-server",
         "Heroku": "https://www.heroku.com/"
     }},
-    {"title": "README Regex Tutotial",
+    {"title": "Responsive Website Refactor",
     "blurb": "Server back end created for MongoDB/Mongoose Data Models. RESTful API modelled for CRUD operations..",
-    "image": "/src/assets/project9",
+    "image": "/src/assets/project13",
     "links": {
         "Site": "https://www.mongodb.com/",
         "Github": "github.com/aponceha/mongodb-server",

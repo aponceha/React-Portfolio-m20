@@ -3,6 +3,8 @@ import Cards from '../Cards';
 import '../../styles/style.css';
 import {motion, AnimatePresence, stagger} from 'framer-motion';
 import projects from '../../assets/projects.json';
+import { useState } from 'react';
+import Modal from '../Modal';
 
 const styles = {
   homeContainer: {
@@ -33,6 +35,12 @@ const styles = {
 };
 
 export default function Porfolio(props) {
+
+
+  const [modalOpen, setModalOpen] = useState(false);
+  const close = () => setModalOpen(false);
+  const open = () => setModalOpen(true);
+
 
   const containerVariants = {
     hidden: {
@@ -86,7 +94,8 @@ export default function Porfolio(props) {
         props.handleGoHome();
       }}>Back to Site</button>
       </div>
-      <AnimatePresence>
+      <AnimatePresence
+      >
       <motion.div className="cardContainer"
       initial="hidden"
       animate="visible"
@@ -94,10 +103,17 @@ export default function Porfolio(props) {
       key={props.viewCards}
         variants={containerVariants}
       >
+        
+        
         <motion.div className="pBorder"
         variants = {cardVariants}
+        whileHover={{ scale: 1.0, cursor: "pointer", y: -10 }}
+        whileTap={{ scale: 0.9 }}
+        onClick={() => modalOpen ? close() : open()}
         >
-          <div className="pCards p7">
+          <motion.div className="pCards p7"
+
+          >
             <div className="descriptionBox">
               <h1 className="projh1">Project 1</h1>
               <p className="pContainer"> Lorem ipsum dolor sit amet, consectetur 
@@ -106,10 +122,12 @@ export default function Porfolio(props) {
                       veniam, quis nostrud exercitation ullamco laboris nisi 
               </p>
             </div>
-          </div>
+          </motion.div>
         </motion.div>
-        <motion.div className="pCards"
+        <motion.div className="pBorder"
         variants = {cardVariants}
+        whileHover={{ scale: 1.0, cursor: "pointer", y: -10 }}
+        whileTap={{ scale: 0.9 }}
         ><div className="pCards p8">
         <div className="descriptionBox">
           <h1 className="projh1">Project 1</h1>
@@ -120,8 +138,10 @@ export default function Porfolio(props) {
           </p>
         </div>
       </div></motion.div>
-        <motion.div className="pCards"
+        <motion.div className="pBorder"
         variants = {cardVariants}
+        whileHover={{ scale: 1.0, cursor: "pointer", y: -10 }}
+        whileTap={{ scale: 0.9 }}
         ><div className="pCards p2">
         <div className="descriptionBox">
           <h1 className="projh1">Project 1</h1>
@@ -132,8 +152,10 @@ export default function Porfolio(props) {
           </p>
         </div>
       </div></motion.div>
-        <motion.div className="pCards"
+        <motion.div className="pBorder"
         variants = {cardVariants}
+        whileHover={{ scale: 1.0, cursor: "pointer", y: -10 }}
+        whileTap={{ scale: 0.9 }}
         ><div className="pCards p10">
         <div className="descriptionBox">
           <h1 className="projh1">Project 1</h1>
@@ -144,8 +166,10 @@ export default function Porfolio(props) {
           </p>
         </div>
       </div></motion.div>
-        <motion.div className="pCards"
+        <motion.div className="pBorder"
         variants = {cardVariants}
+        whileHover={{ scale: 1.0, cursor: "pointer", y: -10 }}
+        whileTap={{ scale: 0.9 }}
         ><div className="pCards p4">
         <div className="descriptionBox">
           <h1 className="projh1">Project 1</h1>
@@ -156,8 +180,10 @@ export default function Porfolio(props) {
           </p>
         </div>
       </div></motion.div>
-        <motion.div className="pCards"
+        <motion.div className="pBorder"
         variants = {cardVariants}
+        whileHover={{ scale: 1.0, cursor: "pointer", y: -10 }}
+        whileTap={{ scale: 0.9 }}
         ><div className="pCards p1">
         <div className="descriptionBox">
           <h1 className="projh1">Project 1</h1>
@@ -168,8 +194,10 @@ export default function Porfolio(props) {
           </p>
         </div>
       </div></motion.div>
-        <motion.div className="pCards"
+        <motion.div className="pBorder"
         variants = {cardVariants}
+        whileHover={{ scale: 1.0, cursor: "pointer", y: -10 }}
+        whileTap={{ scale: 0.9 }}
         ><div className="pCards p6">
         <div className="descriptionBox">
           <h1 className="projh1">Project 1</h1>
@@ -180,8 +208,10 @@ export default function Porfolio(props) {
           </p>
         </div>
       </div></motion.div>
-        <motion.div className="pCards"
+        <motion.div className="pBorder"
         variants = {cardVariants}
+        whileHover={{ scale: 1.0, cursor: "pointer", y: -10 }}
+        whileTap={{ scale: 0.9 }}
         ><div className="pCards p3">
         <div className="descriptionBox">
           <h1 className="projh1">Project 1</h1>
@@ -192,8 +222,10 @@ export default function Porfolio(props) {
           </p>
         </div>
       </div></motion.div>
-        <motion.div className="pCards"
+        <motion.div className="pBorder"
         variants = {cardVariants}
+        whileHover={{ scale: 1.0, cursor: "pointer", y: -10 }}
+        whileTap={{ scale: 0.9 }}
         ><div className="pCards p11">
         <div className="descriptionBox">
           <h1 className="projh1">Project 1</h1>
@@ -204,8 +236,10 @@ export default function Porfolio(props) {
           </p>
         </div>
       </div></motion.div>
-        <motion.div className="pCards"
+        <motion.div className="pBorder"
         variants = {cardVariants}
+        whileHover={{ scale: 1.0, cursor: "pointer", y: -10 }}
+        whileTap={{ scale: 0.9 }}
         ><div className="pCards p12">
         <div className="descriptionBox">
           <h1 className="projh1">Project 1</h1>
@@ -216,8 +250,10 @@ export default function Porfolio(props) {
           </p>
         </div>
       </div></motion.div>
-        <motion.div className="pCards"
+        <motion.div className="pBorder"
         variants = {cardVariants}
+        whileHover={{ scale: 1.0, cursor: "pointer", y: -10 }}
+        whileTap={{ scale: 0.9 }}
         ><div className="pCards p5">
         <div className="descriptionBox">
           <h1 className="projh1">Project 1</h1>
@@ -228,8 +264,10 @@ export default function Porfolio(props) {
           </p>
         </div>
       </div></motion.div>
-        <motion.div className="pCards"
+        <motion.div className="pBorder"
         variants = {cardVariants}
+        whileHover={{ scale: 1.0, cursor: "pointer", y: -10 }}
+        whileTap={{ scale: 0.9 }}
         ><div className="pCards p9">
         <div className="descriptionBox">
           <h1 className="projh1">Project 1</h1>
