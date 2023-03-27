@@ -2,7 +2,7 @@
     {
         "title": "Note Taker App",
         "blurb": "Allows users to create, save, and delete notes. Uses Express.js back end and saves and retrieves note data from a JSON file. Uses UUID to generate unique IDs for each note. RESTful API endpoints are used to perform CRUD operations.",
-        "image": "/src/assets/project7",
+        "image": "../../assets/project7.png",
         "links": {
             "Site": "https://note-taker-aponceha.herokuapp.com/",
             "Github": "https://github.com/aponceha/Note-Taker",

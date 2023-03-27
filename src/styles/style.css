@@ -180,8 +180,6 @@ a:visited {
 .pCards {
     background-color: rgb(2, 53, 17);
     border-radius: 10px;
-    margin: 10px;
-    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -191,24 +189,46 @@ a:visited {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    opacity: 1;
 }
 
 .pBorder {
     background-color: rgb(38, 38, 61);
     border-radius: 10px;
+    padding: 15px;
+    position: relative;
+    overflow: hidden;
 }
 
 .descriptionBox {
-    background-color: white;
-    opacity: 0;
+    background-color: rgb(91, 66, 124);
+    border-radius: 5px;
+    opacity: 1;
+    color:hsl(0, 0%, 100%);
+    padding: 7px;
+    overflow:scroll;
+    width: 100%;
+    height: 100%;
+    font-family: "Montserrat";
+    position: absolute;
+    top: 0;
+    left: 0;
+
 }
 
 .projh1 {
-    background-color: blue;
+    background-color: rgb(48, 11, 90);
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 3px;
+    font-size: large;
 }
 
-.pcontainer {
-    border: solid rgb(113, 233, 139)
+.pContainer {
+    background-color: rgb(48, 11, 90);
+    border-radius: 5px;
+    padding: 12px;
 }
 
 .backdrop {
@@ -221,6 +241,12 @@ a:visited {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.cardlinks {
+    background-color: rgb(48, 11, 90);
+    padding: 4px;
+    border-radius: 5px;
 }
 
 .modal {
@@ -239,38 +265,38 @@ a:visited {
 }
 
  .p1 {
-    background-image: url('../assets/project1.png');
+    background-image: url('../assets/project7.png');
  }
  .p2 {
-    background-image: url('../assets/project2.png');
+    background-image: url('../assets/project8.png');
  }
 .p3 {
-    background-image: url('../assets/project3.png');
+    background-image: url('../assets/project2.png');
 }
 .p4 {
-    background-image: url('../assets/project4.png');
-}
-.p5 {
-    background-image: url('../assets/project5.png');
-}
-.p6 {
-    background-image: url('../assets/project6.png');
-}
-.p7 {
-    background-image: url('../assets/project7.png');
-}
-.p8 {
-    background-image: url('../assets/project8.png');
-}
-.p9 {
-    background-image: url('../assets/project9.png');
-}
-.p10 {
     background-image: url('../assets/project10.png');
 }
-.p11 {
+.p5 {
+    background-image: url('../assets/project4.png');
+}
+.p6 {
+    background-image: url('../assets/project1.png');
+}
+.p7 {
+    background-image: url('../assets/project6.png');
+}
+.p8 {
+    background-image: url('../assets/project3.png');
+}
+.p9 {
     background-image: url('../assets/project11.png');
 }
-.p12 {
+.p10 {
     background-image: url('../assets/project12.png');
+}
+.p11 {
+    background-image: url('../assets/project5.png');
+}
+.p12 {
+    background-image: url('../assets/project13.png');
 }

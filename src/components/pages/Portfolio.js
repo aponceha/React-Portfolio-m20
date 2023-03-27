@@ -79,7 +79,7 @@ export default function Porfolio(props) {
     },
     exit: {
       x: "-100vw",
-      transition: { ease: "easeInOut" },
+      transition: { ease: "easeInOut", duration: 0.5 },
     },
   };
 
@@ -103,28 +103,77 @@ export default function Porfolio(props) {
       key={props.viewCards}
         variants={containerVariants}
       >
-        
-        
-        <motion.div className="pBorder"
+        {projects.map((project, index) => {
+          const img = `pCards p${index+1}`
+          return (
+            <motion.div className="pBorder"
         variants = {cardVariants}
         whileHover={{ scale: 1.0, cursor: "pointer", y: -10 }}
         whileTap={{ scale: 0.9 }}
         onClick={() => modalOpen ? close() : open()}
         >
-          <motion.div className="pCards p7"
-
-          >
-            <div className="descriptionBox">
-              <h1 className="projh1">Project 1</h1>
-              <p className="pContainer"> Lorem ipsum dolor sit amet, consectetur 
-                      adipiscing elit, sed do eiusmod tempor incididunt 
-                      ut labore et dolore magna aliqua. Ut enim ad minim 
-                      veniam, quis nostrud exercitation ullamco laboris nisi 
-              </p>
-            </div>
+          <motion.div className= {img}>
           </motion.div>
+          <AnimatePresence>
+          {modalOpen && <motion.div className="descriptionBox"
+          initial={{ y: 250 }}
+          animate={{ y: 0 }}
+          exit= {{ y: 250, transition: { duration: 0.2 } }}
+          key={img}
+          
+          >
+              <h1 className="projh1">{project.title}</h1>
+              <p className="pContainer"> {project.blurb}
+              </p>
+              <div className="link-div"> 
+                {project.links.Site && <a href={project.links.Site} className="link-header cardlinks">View Site</a>}
+                {project.links.Github && <a href={project.links.Github} className="link-header cardlinks">Github</a>}
+                {project.links.Video && <a href={project.links.Video} className="link-header cardlinks">Video</a>}
+              </div>
+            </motion.div>}
+          </AnimatePresence>
+            
         </motion.div>
-        <motion.div className="pBorder"
+          )}) }
+        
+        
+      </motion.div>
+      </AnimatePresence>
+    </div>
+  );
+}
+
+// <motion.div className="pBorder"
+        // variants = {cardVariants}
+        // whileHover={{ scale: 1.0, cursor: "pointer", y: -10 }}
+        // whileTap={{ scale: 0.9 }}
+        // onClick={() => modalOpen ? close() : open()}
+        // >
+        //   <motion.div className="pCards p7">
+        //   </motion.div>
+        //   <AnimatePresence>
+        //   {modalOpen && <motion.div className="descriptionBox"
+        //   initial={{ y: 250 }}
+        //   animate={{ y: 0 }}
+        //   exit= {{ y: 250, transition: { duration: 0.2 } }}
+        //   key="box"
+          
+        //   >
+        //       <h1 className="projh1">{projects[0].title}</h1>
+        //       <p className="pContainer"> {projects[0].blurb}
+        //       </p>
+        //       <div className="link-div"> 
+        //         {projects[0].links.Site && <a href={projects[0].links.Site} className="link-header cardlinks">View Site</a>}
+        //         {projects[0].links.Github && <a href={projects[0].links.Github} className="link-header cardlinks">Github</a>}
+        //         {projects[0].links.Video && <a href={projects[0].links.Video} className="link-header cardlinks">Video</a>}
+        //       </div>
+        //     </motion.div>}
+        //   </AnimatePresence>
+            
+        // </motion.div>
+
+
+        {/* <motion.div className="pBorder"
         variants = {cardVariants}
         whileHover={{ scale: 1.0, cursor: "pointer", y: -10 }}
         whileTap={{ scale: 0.9 }}
@@ -277,9 +326,4 @@ export default function Porfolio(props) {
                   veniam, quis nostrud exercitation ullamco laboris nisi 
           </p>
         </div>
-      </div></motion.div>
-      </motion.div>
-      </AnimatePresence>
-    </div>
-  );
-}
+      </div></motion.div> */}
