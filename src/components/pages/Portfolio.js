@@ -37,12 +37,11 @@ const styles = {
 export default function Porfolio(props) {
 
 
-  const [modalOpen, setModalOpen] = useState(false);
-  const close = () => setModalOpen(false);
-  const open = () => setModalOpen(true);
-
-  
-
+  const modalsOpen = {};
+  projects.forEach((project, index) => {
+    const [modalOpen, setModalOpen] = useState(false);
+    modalsOpen[index] = { modalOpen, setModalOpen };
+  });
 
   const containerVariants = {
     hidden: {
@@ -89,13 +88,20 @@ export default function Porfolio(props) {
 
   return (
     <div className="portBody">
-      <div className="portBtnDiv">
-        <button className="btn btn-primary" onClick={() => 
+      <AnimatePresence>
+        <motion.div className="portBtnDiv"
+        initial={{ y: -200, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        exit={{ y: -100, opacity: 0 }}
+        transition={{ duration: 0.4, delay: 2, type: "spring", stiffness: 140 }}
+        >
+        <button className="btn btn-p link-header cardlinks" onClick={() => 
         {props.setViewCards("0");
         console.log(props.viewCards);
         props.handleGoHome();
       }}>Back to Site</button>
-      </div>
+      </motion.div></AnimatePresence>
+      
       <AnimatePresence
       >
       <motion.div className="cardContainer"
@@ -112,29 +118,33 @@ export default function Porfolio(props) {
         variants = {cardVariants}
         whileHover={{ scale: 1.0, cursor: "pointer", y: -10 }}
         whileTap={{ scale: 0.9 }}
-        onClick={() => {modalOpen ? close() : open(); stopPropagation()}}
+        onClick={() => { modalsOpen[index].modalOpen ?
+          modalsOpen[index].setModalOpen(false) :
+          modalsOpen[index].setModalOpen(true);
+        }}
         >
           <motion.div className= {img}>
           <h1 className="projh1">{project.title}</h1>
           </motion.div>
           <AnimatePresence>
-          {modalOpen && <motion.div className="descriptionBox"
+          {modalsOpen[index].modalOpen && <motion.div className="descriptionBox"
           initial={{ y: 250 }}
           animate={{ y: 0 }}
           exit= {{ y: 250, transition: { duration: 0.2 } }}
           key={img}
           
           >
-              <p className="pContainer"> {project.blurb}
-              </p>
-              <div className="link-div"> 
+              <div className="link-div cardlinkcontainer"> 
                 {project.links.Site && <a href={project.links.Site} className="link-header cardlinks">View Site</a>}
                 {project.links.Github && <a href={project.links.Github} className="link-header cardlinks">Github</a>}
                 {project.links.Video && <a href={project.links.Video} className="link-header cardlinks">Video</a>}
               </div>
+              <p className="pContainer"> {project.blurb}
+              </p>
+              
             </motion.div>}
           </AnimatePresence>
-            
+          
         </motion.div>
           )}) }
         
